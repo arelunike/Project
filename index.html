@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="font/fontawesome-free/css/all.css">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+        <title>Acceuil</title>
+        <style type="text/css" media="all">
+
+        </style>
+    </head>
+    <body>
+        <div class="bg-img">
+            <img class="bg-image" src="main.jpg" alt="" />
+        </div>
+        <header class="container sticky-top mb-5 shadow-sm">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="" id="logo">
+                    Arel.
+                </div>
+                <div class="menu-icon d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto" id="liens">
+                        <li class="nav-item"><a class="nav-link active " href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Portofolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="container">
+            <section id="section-1">
+                <div class="d-flex flex-column flex-lg-row align-items-center column-gap-5 py-3">
+                    <div class="order-2 order-lg-1" id="description">
+                        <h1 class="">Hi, I'm Arel Ghost</h1>
+                        <div class="description-2">
+                            <h4>Frontend Developer</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a dictum metus. Nam ut velit est. Curabitur pellentesque nunc eu lorem mollis, nec finibus sapien aliquet. Vestibulum ac dolor condimentum, convallis massa vitae, dictum lectus.</p>
+                            <div class="btn-box my-4">
+                                <a class="btnlink btnlink-1" href="#">Hire Me</a>
+                                <a class="btnlink btnlink-2" href="#">Let's Talk</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 order-lg-2 mb-5" id="">
+                        <div class="portrait-box mx-3">
+                            <img class="img-fluid" id="portrait" src="img/img1.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="ref-link-box mb-5">
+                    <a class="ref-link" href="#"><i class="fa-brands fa-facebook-f" style=""></i></a>
+                    <a class="ref-link" href="#"><i class="fa-brands fa-linkedin-in" style=""></i></a>
+                    <a class="ref-link" href="#"><i class="fa-brands fa-whatsapp" style=""></i></a>
+                </div>
+            </section>
+        </main>
+        
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const menuIcon = document.querySelector('.menu-icon');
+      const navbarCollapse = document.querySelector('#navbarCollapse');
+    
+      menuIcon.addEventListener('click', function () {
+        this.classList.toggle('active');
+      });
+    
+      // Fermer le menu quand on clique à l'extérieur
+      document.addEventListener('click', function (event) {
+        const isClickInsideMenu = navbarCollapse.contains(event.target);
+        const isClickOnMenuIcon = menuIcon.contains(event.target);
+    
+        // Si le clic n'est ni sur l'icône ni dans le menu, on le ferme
+        if (!isClickInsideMenu && !isClickOnMenuIcon) {
+          navbarCollapse.classList.remove('show'); // Ferme le menu
+          menuIcon.classList.remove('active');    // Réinitialise l'icône
+        }
+      });
+    </script>
+    </body>
+</html>
